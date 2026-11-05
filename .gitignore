@@ -1,0 +1,23 @@
+# Keep this repository limited to the static demo page and its active videos.
+*
+
+# Repository configuration
+!/.gitignore
+
+# Demo page
+!/index.html
+!/styles.css
+!/app.js
+
+# SeedVR2 demo videos used by index.html
+!/video20_seedvr2_1024/
+!/video20_seedvr2_1024/*.mp4
+!/video20_seedvr2_1024/posters/
+!/video20_seedvr2_1024/posters/*.jpg
+
+# Removed low-quality demos must stay out even if restored locally.
+/video20_seedvr2_1024/chinese_girl_2_seedvr2_1024.mp4
+/video20_seedvr2_1024/einstein_seedvr2_1024.mp4
+/video20_seedvr2_1024/young_woman_1_seedvr2_1024.mp4
+/video20_seedvr2_1024/feng_ge_seedvr2_1024.mp4
+/video20_seedvr2_1024/posters/feng_ge_seedvr2_1024.jpg

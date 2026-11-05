@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta name="description" content="OpenVA-Dialogue — an open-source agent for full-duplex real-time audio-visual dialogue." />
+    <title>OpenVA-Dialogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-noise" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="OpenVA-Dialogue home">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span class="brand-name">OpenVA<span class="brand-dot">·</span>Dialogue</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="active" href="#demos">Demos</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#overview">Overview</a>
+        <a href="#citation">Citation</a>
+      </nav>
+      <a class="topbar-link" href="#citation">Paper <span>↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="kicker"><span class="kicker-line"></span> OPEN-SOURCE A2AV AGENT / 2026</p>
+          <h1>Full-duplex dialogue,<br /><em>in real time.</em></h1>
+          <p class="hero-lede">OpenVA-Dialogue coordinates streaming speech and avatar video in one continuous interaction on a single consumer GPU.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#demos">Explore demos <span>↓</span></a>
+            <a class="button button-quiet" href="#overview">Read the overview <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Abstract waveform visual">
+          <div class="visual-grid"></div>
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="visual-core">
+            <div class="core-ring ring-back"></div>
+            <div class="core-ring ring-front"></div>
+            <div class="core-glow"></div>
+            <div class="core-label"><span>FULL</span><span>DUPLEX</span></div>
+          </div>
+          <div class="visual-caption"><span>01</span><span>speech ↔ video</span></div>
+          <div class="signal signal-a"></div>
+          <div class="signal signal-b"></div>
+        </div>
+      </section>
+
+      <section class="intro-section shell" id="overview">
+        <div class="section-index">01 <span>/</span> OVERVIEW</div>
+        <div class="intro-grid">
+          <div>
+            <h2>Listen, speak,<br /><span>stay continuous.</span></h2>
+          </div>
+          <div class="intro-body">
+            <p>OpenVA-Dialogue jointly manages dialogue and audio-visual generation states. User interruptions update the response while avatar motion and the shared media timeline remain continuous.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section shell" id="demos">
+        <div class="section-heading">
+          <div>
+            <div class="section-index">02 <span>/</span> DEMO LAB</div>
+            <h2>Dialogue across identities.</h2>
+          </div>
+          <p class="section-note">14 generated avatar examples.</p>
+        </div>
+
+        <div class="demo-toolbar">
+          <div class="filter-tabs" role="tablist" aria-label="Demo categories">
+            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All <span>14</span></button>
+            <button class="filter-tab" data-filter="duplex" role="tab" aria-selected="false">Full duplex <span>02</span></button>
+            <button class="filter-tab" data-filter="long" role="tab" aria-selected="false">Long-form <span>04</span></button>
+            <button class="filter-tab" data-filter="persona" role="tab" aria-selected="false">Personas <span>04</span></button>
+            <button class="filter-tab" data-filter="style" role="tab" aria-selected="false">Visual styles <span>04</span></button>
+          </div>
+        </div>
+
+        <div class="demo-grid" id="demoGrid">
+          <article class="demo-card" data-category="duplex">
+            <div class="card-media">
+              <video data-src="video20_seedvr2_1024/alan_turing_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/alan_turing_seedvr2_1024.jpg" muted loop playsinline preload="none"></video>
+              <div class="media-shade"></div>
+              <div class="card-topline"><span class="card-index">01</span><span class="card-tag">FULL DUPLEX</span></div>
+              <button class="play-button" aria-label="Play Alan Turing sample"><span class="play-icon"></span></button>
+            </div>
+            <div class="card-content"><h3>Alan Turing</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="duplex">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/british_young_woman_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/british_young_woman_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">02</span><span class="card-tag">FULL DUPLEX</span></div><button class="play-button" aria-label="Play British young woman sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>British young woman</h3></div>
+          </article>
+
+
+          <article class="demo-card" data-category="long">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/english_girl_1_long_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/english_girl_1_long_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">03</span><span class="card-tag">LONG CONTEXT</span></div><button class="play-button" aria-label="Play English girl long context sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>English girl · long form</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="long">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/warren_buffett_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/warren_buffett_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">04</span><span class="card-tag">LONG CONTEXT</span></div><button class="play-button" aria-label="Play Warren Buffett sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Warren Buffett</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="persona">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/cristiano_ronaldo_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/cristiano_ronaldo_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">05</span><span class="card-tag">PERSONA</span></div><button class="play-button" aria-label="Play Cristiano Ronaldo sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Cristiano Ronaldo</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="persona">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/daniel_wu_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/daniel_wu_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">06</span><span class="card-tag">PERSONA</span></div><button class="play-button" aria-label="Play Daniel Wu sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Daniel Wu</h3></div>
+          </article>
+
+
+          <article class="demo-card" data-category="style">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/girl_with_a_pearl_earring_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/girl_with_a_pearl_earring_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">07</span><span class="card-tag">STYLE TRANSFER</span></div><button class="play-button" aria-label="Play Girl with a Pearl Earring sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Girl with a Pearl Earring</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="persona">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/jj_lin_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/jj_lin_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">08</span><span class="card-tag">PERSONA</span></div><button class="play-button" aria-label="Play JJ Lin sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>JJ Lin</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="long">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/lionel_messi_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/lionel_messi_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">09</span><span class="card-tag">LONG CONTEXT</span></div><button class="play-button" aria-label="Play Lionel Messi sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Lionel Messi</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="style">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/mona_lisa_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/mona_lisa_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">10</span><span class="card-tag">STYLE TRANSFER</span></div><button class="play-button" aria-label="Play Mona Lisa sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Mona Lisa</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="long">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/english_girl_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/english_girl_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">11</span><span class="card-tag">LONG CONTEXT</span></div><button class="play-button" aria-label="Play English girl sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>English girl</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="persona">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/taylor_swift_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/taylor_swift_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">12</span><span class="card-tag">PERSONA</span></div><button class="play-button" aria-label="Play Taylor Swift sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Taylor Swift</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="style">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/young_woman_2_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/young_woman_2_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">13</span><span class="card-tag">STYLE TRANSFER</span></div><button class="play-button" aria-label="Play young woman style sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Young woman · cinematic</h3></div>
+          </article>
+
+          <article class="demo-card" data-category="style">
+            <div class="card-media"><video data-src="video20_seedvr2_1024/zhang_ruonan_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/zhang_ruonan_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="media-shade"></div><div class="card-topline"><span class="card-index">14</span><span class="card-tag">STYLE TRANSFER</span></div><button class="play-button" aria-label="Play Zhang Ruonan sample"><span class="play-icon"></span></button></div>
+            <div class="card-content"><h3>Zhang Ruonan</h3></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="benchmark-section shell" id="benchmark">
+        <div class="section-index">03 <span>/</span> QUALITATIVE COMPARISON</div>
+        <div class="benchmark-head">
+          <div><h2>Same reference.<br /><span>Side by side.</span></h2></div>
+          <div class="benchmark-copy"><p>Compare OpenVA-Dialogue with Vidu S1 under the same reference conditions. Open either clip for a larger, controllable view.</p></div>
+        </div>
+        <div class="compare-stage">
+          <article class="compare-panel compare-ours">
+            <div class="compare-media" role="button" tabindex="0" aria-label="Open OpenVA-Dialogue comparison video"><video data-src="video20_seedvr2_1024/alan_turing_seedvr2_1024.mp4" poster="video20_seedvr2_1024/posters/alan_turing_seedvr2_1024.jpg" muted loop playsinline preload="none"></video><div class="compare-overlay"></div><div class="compare-label"><span class="compare-index">A / OURS</span><span>VIEW LARGE ↗</span></div><span class="compare-play" aria-hidden="true"><span class="play-icon"></span></span></div>
+            <div class="compare-caption"><h3>OpenVA-Dialogue</h3><span class="compare-status">FULL-DUPLEX A2AV</span></div>
+          </article>
+          <div class="versus-mark"><span>VS</span><i></i></div>
+          <article class="compare-panel compare-vidu">
+            <div class="compare-placeholder" id="viduPlaceholder"><div class="placeholder-orbit"></div><div class="placeholder-copy"><span class="compare-index">B / BASELINE</span><strong>Vidu S1</strong><label class="upload-button" for="viduUpload">Load local clip <span>↗</span></label><input id="viduUpload" type="file" accept="video/*" /></div></div>
+            <video class="vidu-video" id="viduVideo" muted loop playsinline hidden aria-label="Open Vidu S1 comparison video"></video>
+            <div class="compare-caption"><h3>Vidu S1</h3><span class="compare-status status-muted">AWAITING CLIP</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="citation-section shell" id="citation">
+        <div class="section-index">04 <span>/</span> CITATION</div>
+        <div class="citation-grid">
+          <div><h2>Cite<br /><span>OpenVA-Dialogue.</span></h2><p>Bibliographic details will be updated with the public release.</p></div>
+          <div class="citation-box"><div class="citation-top"><span>BIBTEX</span><button id="copyCitation" type="button">Copy citation <span>⧉</span></button></div><code id="citationText">@article{openva_dialogue2026,<br />&nbsp;&nbsp;title = {OpenVA-Dialogue: Open Source Intelligent Agents for Full-Duplex Real-Time Video and Audio Dialogue},<br />&nbsp;&nbsp;author = {Anonymous Authors},<br />&nbsp;&nbsp;year = {2026}<br />}</code><span class="copy-confirm" id="copyConfirm">Copied to clipboard</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell"><span>OPENVA-DIALOGUE / FULL-DUPLEX A2AV</span><span>Research preview · 2026</span><a href="#top">Back to top ↑</a></footer>
+
+    <div class="video-modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video preview">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel"><button class="modal-close" data-close-modal aria-label="Close video">×</button><video id="modalVideo" controls playsinline></video><div class="modal-meta"><p class="modal-label" id="modalEyebrow"></p><h3 id="modalTitle"></h3></div></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
