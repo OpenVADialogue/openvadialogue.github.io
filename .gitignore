@@ -8,23 +8,24 @@
 !/index.html
 !/styles.css
 !/app.js
+!/alan_vidus2.mp4
+!/alan_vidus2.jpg
 
 # SeedVR2 demo videos used by index.html
-!/video20_seedvr2_1024/
-!/video20_seedvr2_1024/*.mp4
-!/video20_seedvr2_1024/posters/
-!/video20_seedvr2_1024/posters/*.jpg
+!/video20_seedvr2/
+!/video20_seedvr2/*.mp4
+!/video20_seedvr2/posters/
+!/video20_seedvr2/posters/*.jpg
 
-# Scenario demos used by index.html (keep the source ZIP ignored)
-!/video10_1024/
-!/video10_1024/video10_1024/
-!/video10_1024/video10_1024/*.mp4
-!/video10_1024/video10_1024/posters/
-!/video10_1024/video10_1024/posters/*.jpg
+# 7B scenario demos used by index.html (keep the source ZIP ignored)
+!/video10_1024_7b/
+!/video10_1024_7b/*.mp4
+!/video10_1024_7b/posters/
+!/video10_1024_7b/posters/*.jpg
 
 # Removed low-quality demos must stay out even if restored locally.
-/video20_seedvr2_1024/chinese_girl_2_seedvr2_1024.mp4
-/video20_seedvr2_1024/einstein_seedvr2_1024.mp4
-/video20_seedvr2_1024/young_woman_1_seedvr2_1024.mp4
-/video20_seedvr2_1024/feng_ge_seedvr2_1024.mp4
-/video20_seedvr2_1024/posters/feng_ge_seedvr2_1024.jpg
+/video20_seedvr2/chinese_girl_2_seedvr2.mp4
+/video20_seedvr2/einstein_seedvr2.mp4
+/video20_seedvr2/young_woman_1_seedvr2.mp4
+/video20_seedvr2/feng_ge_seedvr2.mp4
+/video20_seedvr2/posters/feng_ge_seedvr2.jpg

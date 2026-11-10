@@ -126,13 +126,13 @@ copyButton.addEventListener('click', async () => {
 });
 
 // --- Side-by-side baseline comparison ------------------------------------
-const compareMedia = document.querySelector('.compare-ours .compare-media');
-const compareVideo = compareMedia?.querySelector('video');
-if (compareMedia && compareVideo) {
+document.querySelectorAll('.compare-media[data-comparison-title]').forEach((compareMedia) => {
+  const compareVideo = compareMedia.querySelector('video');
+  if (!compareVideo) return;
   const openComparison = () => openVideoModal(
     getVideoSource(compareVideo),
-    'OpenVA-Dialogue',
-    'QUALITATIVE COMPARISON / OURS',
+    compareMedia.dataset.comparisonTitle,
+    compareMedia.dataset.comparisonLabel,
   );
   compareMedia.addEventListener('click', openComparison);
   compareMedia.addEventListener('keydown', (event) => {
@@ -141,38 +141,4 @@ if (compareMedia && compareVideo) {
       openComparison();
     }
   });
-}
-const viduUpload = document.querySelector('#viduUpload');
-const viduPlaceholder = document.querySelector('#viduPlaceholder');
-const viduVideo = document.querySelector('#viduVideo');
-const viduStatus = document.querySelector('.compare-vidu .compare-status');
-if (viduUpload && viduVideo) {
-  viduUpload.addEventListener('change', (event) => {
-    const file = event.target.files && event.target.files[0];
-    if (!file) return;
-    if (viduVideo.dataset.objectUrl) URL.revokeObjectURL(viduVideo.dataset.objectUrl);
-    const objectUrl = URL.createObjectURL(file);
-    viduVideo.dataset.objectUrl = objectUrl;
-    viduVideo.src = objectUrl;
-    viduVideo.hidden = false;
-    viduVideo.tabIndex = 0;
-    viduVideo.setAttribute('role', 'button');
-    viduPlaceholder.style.display = 'none';
-    if (viduStatus) {
-      viduStatus.classList.remove('status-muted');
-      viduStatus.textContent = 'VIEW LARGE ↗';
-    }
-  });
-
-  const openViduComparison = () => {
-    if (!viduVideo.src) return;
-    openVideoModal(viduVideo.src, 'Vidu S1', 'QUALITATIVE COMPARISON / BASELINE');
-  };
-  viduVideo.addEventListener('click', openViduComparison);
-  viduVideo.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openViduComparison();
-    }
-  });
-}
+});
